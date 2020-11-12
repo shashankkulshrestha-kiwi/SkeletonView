@@ -3,6 +3,16 @@
 import UIKit
 
 public extension UIView {
+    
+    /// OBJ C Compatibility
+    @objc func showWaitingLoader() {
+        self.showAnimatedSkeleton()
+    }
+    
+    @objc func hideWaitingLoader(){
+        self.hideSkeleton(reloadDataAfter: true)
+    }
+    
     /// Shows the skeleton without animation using the view that calls this method as root view.
     ///
     /// - Parameters:
